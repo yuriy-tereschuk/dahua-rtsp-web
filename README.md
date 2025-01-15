@@ -42,3 +42,10 @@ http://username:password@host:port/cgi-bin/snapshot.cgi?0
 
 ### Notice
 This project is made possible by using RTSP over WebSocket functionality implemented by Dahua for their IP Cameras. Code available in this project is extracted from an Dahua IP Camera and made to work standalone. We have no intent to commercialize this project.
+
+### Build (Linux)
+Inside repository root:
+1. npm run build (in case of SSL issue use `ODE_OPTIONS=--openssl-legacy-provider npm run build`)
+2. go into created directory ./dist
+3. run: python3 -m http.server --bind localhost
+4. open browser and type http://localhost:8000/ (wait a while)
